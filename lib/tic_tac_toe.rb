@@ -87,13 +87,13 @@ end
 def play(board)
   counter=0
   until over?(board)
-    turn(board) 
+    turn(board)
     counter+=1
     if winner(board)
       "Congratulations #{winner}!"
     elsif draw?(board)
       "Cat's Game!"
-    else play(board)
+    else turn(board)
     end
   end
 end
