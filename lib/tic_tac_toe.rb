@@ -87,7 +87,7 @@ end
 def play(board)
   counter=0
   until over?(board)
-    turn(board)
+    turn(board) && !draw?(board)
     counter+=1
     if winner(board)
       "Congratulations #{winner}!"
