@@ -89,11 +89,12 @@ def play(board)
   until over?(board)
     turn(board)
     counter+=1
-    if winner(board)
+  end 
+    winner(board)
       puts "Congratulations #{winner(board)}!"
-    elsif draw?(board)
+    draw?(board)
       puts "Cat's Game!"
-    else play(board)
-    end
+     
+  
   end
 end
